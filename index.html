@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<title>Wonderland Park 2023</title>
+<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #003D5B;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .countdown-title {
+            font-family: "Roboto Condensed", serif;
+            font-size: 90px;
+            margin-bottom: 20px;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            color: #fff;
+            background-color: #333;
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+        }
+
+        .countdown-item span {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .countdown-label {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="countdown-container">
+        <div class="countdown-title">WONDERLAND PARK 2023</div>
+        <div class="countdown-item">
+            <span id="days">0</span>
+            <div class="countdown-label">Days</div>
+        </div>
+    </br>
+        <div class="countdown-item">
+            <span id="hours">0</span>
+            <div class="countdown-label">Hours</div>
+        </div>
+    </br>
+        <div class="countdown-item">
+            <span id="minutes">0</span>
+            <div class="countdown-label">Minutes</div>
+        </div>
+    </br>
+        <div class="countdown-item">
+            <span id="seconds">0</span>
+            <div class="countdown-label">Seconds</div>
+        </div>
+    </div>
+
+    <script>
+        // Tanggal target countdown
+        var countDownDate = new Date("July 17, 2023 08:00:00").getTime();
+
+        // Update countdown setiap 1 detik
+        var countdown = setInterval(function() {
+
+            // Dapatkan tanggal dan waktu sekarang
+            var now = new Date().getTime();
+
+            // Hitung selisih waktu antara sekarang dan tanggal target
+            var distance = countDownDate - now;
+
+            // Hitung hari, jam, menit, dan detik
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Tampilkan nilai countdown di elemen dengan ID yang sesuai
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            // Jika countdown selesai, tampilkan teks 'Countdown selesai!'
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("days").innerText = "Countdown";
+                document.getElementById("hours").innerText = "selesai!";
+                document.getElementById("minutes").style.display = "none";
+                document.getElementById("seconds").style.display = "none";
+            }
+        }, 1000);
+    </script>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "fa9592ed-30fd-4078-bef6-249e0ca33661", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "26b1fa04-730e-45fb-9bde-68dd4c035d25", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
