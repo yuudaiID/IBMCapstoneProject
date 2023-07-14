@@ -2,12 +2,16 @@
 
 This is Individual project capstone given by Infinite learning as independent study final project for Kampus Merdeka batch 4. Thanks to IBM for your cloud service.
 
-This project is very simple and easy even for a beginner because basically the idea of ​​this project is still very basic.
-Watson assistant from IBM is very helpful in making this chatbot because I personally think it is easy to use so it is suitable for ordinary people who just want to make a simple project about AI.
+# Copyright
 
-The chatbot I chose is a chatbot deployed on an amusement park website.
+All copyright regarding "Emu Otori" and others are held by the creator and publisher. 
 
+©SEGA @Hatsune Miku: Colorful Stage! @Piapro Studio @Colorful Palette  ©Crypton Future Media, Inc. @Craft Egg
 
-This chatbot functions as a means of information about amusement parks so that customers don't feel confused.
+# Demo 
 
-The information provided by this chatbot is:
+https://yuudaiid.github.io/IBMCapstoneProject/
+
+# Idea
+
+Wonderland Park is an amusement park that needs a chatbot to answer the curiosity of its customers.
